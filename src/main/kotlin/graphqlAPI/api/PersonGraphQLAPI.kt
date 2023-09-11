@@ -1,7 +1,6 @@
-package org.acme.api
-
+package graphqlAPI.api
 import org.eclipse.microprofile.graphql.*
-import org.acme.model.Person
+import graphqlAPI.model.Person
 import jakarta.transaction.Transactional
 @GraphQLApi
 class PersonGraphQLAPI {

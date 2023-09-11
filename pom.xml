@@ -2,7 +2,7 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.acme</groupId>
+  <groupId>graphqlAPI</groupId>
   <artifactId>user-management-quarkus</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <properties>
@@ -64,6 +64,10 @@
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-flyway</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-h2</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -178,6 +182,17 @@
             <option>all-open:annotation=jakarta.enterprise.context.ApplicationScoped</option>
             <option>all-open:annotation=io.quarkus.test.junit.QuarkusTest</option>
           </pluginOptions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <version>9.22.0</version>
+        <configuration>
+          <url>jdbc:postgresql://floppy.db.elephantsql.com:5432/cruoxdsm</url>
+          <user>cruoxdsm</user>
+          <password>n3Xw-mLE3zdJsW8yFYzsqema8NPeeA7j</password>
+          <baselineOnMigrate>true</baselineOnMigrate>
         </configuration>
       </plugin>
     </plugins>

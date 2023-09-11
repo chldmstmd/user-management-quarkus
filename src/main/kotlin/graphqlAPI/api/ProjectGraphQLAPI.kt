@@ -1,9 +1,9 @@
-package org.acme.api
+package graphqlAPI.api
 
 import jakarta.transaction.Transactional
 import org.eclipse.microprofile.graphql.*
-import org.acme.model.Project
-import org.acme.model.Person
+import graphqlAPI.model.Project
+import graphqlAPI.model.Person
 
 
 @GraphQLApi

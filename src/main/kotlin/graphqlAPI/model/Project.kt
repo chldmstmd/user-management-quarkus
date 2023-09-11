@@ -1,4 +1,4 @@
-package org.acme.model
+package graphqlAPI.model
 import io.quarkus.hibernate.orm.panache.kotlin.PanacheCompanion
 import io.quarkus.hibernate.orm.panache.kotlin.PanacheEntityBase
 import jakarta.persistence.*
@@ -10,7 +10,6 @@ class Project : PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
-
     lateinit var name: String
 
     @ManyToMany(cascade = [(CascadeType.ALL)])
